@@ -1,0 +1,418 @@
+body {
+    background-image: url("/public/assets/images/fond.jpg");
+    background-size: cover;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+}
+
+#cancel-button-container {
+    position: absolute;
+    right: 0;
+    margin-right: 70px;
+    font-size: 15px;
+}
+
+#cancel-button {
+    font-size: 20px;
+}
+
+#ask-id {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+#asked-id, #ask-id-button {
+    font-size: 30px;
+}
+
+#infos-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#summary-container {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    border-right: 5px solid black;
+}
+
+#title {
+    font-size: 40px;
+    text-align: center;
+}
+
+#summary {
+    font-size: 20px;
+    text-align: justify;
+    margin-right: 5%;
+}
+
+#path-container {
+    display: flex;
+    width: 45%;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+}
+
+img {
+    width: 100%;
+}
+
+#perso-container {
+    display: flex;
+    flex-direction: column;
+}
+#perso-first-line-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+#perso-first-line {
+    display: flex;
+    flex-direction: row;
+}
+
+#perso-name {
+    display: flex;
+    font-size: 50px;
+    margin-right: 15px;
+}
+
+#perso-magie {
+    display: flex;
+    font-size: 50px;
+    font-style: italic;
+    color: darkgrey;
+}
+
+#perso-magie-counter {
+    display: flex;
+    font-size: 20px;
+}
+
+#perso-desc {
+    display: flex;
+    font-size: 20px;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+#perso-quest {
+    display: flex;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+#perso-comp {
+    display: flex;
+    flex-direction: column;
+}
+
+#perso-comp-table-div {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+#perso-comp-table {
+    width: 80%;
+    border-collapse: collapse;
+}
+
+.perso-comp-cell {
+    border: 2px solid black;
+    text-align: center;
+    font-size: 25px;
+    width: 20%;
+}
+
+#perso-comp-s-main-table {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+#perso-comp-s-main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.perso-comp-s-second-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 25px;
+    justify-content: space-evenly;
+}
+
+.perso-comp-s-container {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    width: 550px;
+}
+
+.perso-comp-s-title {
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.perso-comp-s-table-div {
+    width: 554px;
+    margin: -1px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.perso-comp-s-table {
+    width: 554px;
+    margin: -1px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.perso-comp-s-table-cell {
+    font-size: 20px;
+    border: 2px solid black;
+}
+
+.agi {
+    background-color: #ffd966;
+}
+
+.int {
+    background-color: #6d9eeb;
+}
+
+.for {
+    background-color: #e06666;
+}
+
+.cha {
+    background-color: #93c47d;
+}
+
+.mag {
+    background-color: #8e7cc3;
+}
+
+.agil {
+    background-color: #fff2cc;
+}
+
+.inte {
+    background-color: #9fc5e8;
+}
+
+.forc {
+    background-color: #ea9999;
+}
+
+.char {
+    background-color: #b6d7a8;
+}
+
+#inventory-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#inventory-first-line-container {
+    display: flex;
+}
+
+#inventory {
+    font-size: 35px;
+    margin-right: 15px;
+}
+
+#gold-container {
+    font-size: 35px;
+    color: darkgray;
+}
+
+#gold-modifier-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#add-remove-container {
+    margin-left: 5px;
+}
+
+#add-gold {
+    cursor: pointer;
+}
+
+#remove-gold {
+    cursor: pointer;
+}
+
+#save-gold {
+    align-self: center;
+    margin-left: 5px;
+}
+
+#bold-form-button {
+    font-size: 20px;
+}
+#items-container {
+    display: flex;
+    font-size: 20px;
+    flex-direction: column;
+}
+
+.item-infos {
+    display: flex;
+    flex-direction: row;
+}
+
+.item-name {
+    margin-right: 5px;
+}
+
+.item-desc {
+    text-transform: lowercase;
+    margin-right: 5px;
+}
+
+.item-count {
+
+}
+
+.plante-effect {
+
+}
+
+.good-effect {
+    color: green;
+}
+
+.bad-effect {
+    color: red;
+}
+
+@media screen and (max-width: 1000px) {
+
+    #cancel-button-container {
+        position: absolute;
+        right: 0;
+    }
+
+    #cancel-button {
+        font-size: 50px;
+    }
+
+    #perso-first-line {
+        flex-direction: column
+    }
+
+    #perso-name {
+        font-size: 80px;
+        align-self: center;
+    }
+
+    #perso-magie {
+        align-self: center;
+    }
+
+    #perso-magie-counter {
+        margin-top: 10px;
+        font-size: 40px;
+    }
+
+    #perso-desc {
+        width: 100%;
+        text-align: justify;
+    }
+
+    #dp {
+        display: none;
+    }
+
+    #perso-quest {
+        font-size: 40px;
+    }
+
+    #perso-comp-table {
+        width: 100%;
+    }
+
+    .perso-comp-s-second-container {
+        flex-direction: column;
+        justify-content: unset;
+    }
+
+    .perso-comp-s-container {
+        margin-bottom: 25px;
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .perso-comp-s-title {
+        width: 100%;
+        font-size: 40px;
+    }
+
+    .perso-comp-s-table-div {
+        width: 100%;
+    }
+
+    .perso-comp-s-table {
+        width: 100%;
+        margin: 0;
+    }
+
+    .perso-comp-s-table-cell {
+        font-size: 40px;
+    }
+
+    #inventory-first-line-container {
+        align-self: center;
+        align-items: center;
+    }
+
+    #inventory {
+        font-size: 60px;
+        margin-right: 30px;
+    }
+
+    #gold-container {
+        font-size: 60px;
+        margin-right: 15px;
+    }
+
+    #add-gold {
+        font-size: 45px;
+        margin-bottom: -20px;
+    }
+
+    #remove-gold {
+        font-size: 45px;
+        margin-top: -20px;
+    }
+
+    #gold-form-button {
+        font-size: 25px;
+    }
+
+    #items-container {
+        font-size: 40px;
+    }
+
+    .item-infos {
+        flex-direction: column;
+    }
+
+    .item-desc {
+        font-style: italic;
+        margin-bottom: 25px;
+    }
+}

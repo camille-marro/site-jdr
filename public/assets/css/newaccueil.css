@@ -1,0 +1,90 @@
+body {
+    background-image: url("/public/assets/images/fond.jpg");
+    background-size: cover;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+}
+
+#ask-id {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+#error_field {
+    align-self: center;
+    font-size: 35px;
+    color: red;
+    margin-bottom: 50px;
+}
+
+#id-personnage, #ask-id-button {
+    font-size: 30px;
+}
+
+#infos-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#summary-container {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin-left: 2.5%;
+    padding-right: 2.5%;
+    border-right: 5px solid black;
+}
+
+#title {
+    font-size: 40px;
+    text-align: center;
+}
+
+#summary {
+    font-size: 20px;
+    text-align: justify;
+}
+
+#path-container {
+    display: flex;
+    width: 45%;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+}
+
+img {
+    width: 100%;
+}
+
+
+@media screen and (max-width: 1000px) {
+    #ask-id {
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    #asked-id {
+        font-size: 50px;
+    }
+
+    #ask-id-button {
+        font-size: 50px;
+    }
+
+    #infos-container {
+        flex-direction: column-reverse;
+    }
+
+    #summary-container {
+        width: 95%;
+        border: none;
+        margin-bottom: 50px;
+    }
+
+    #path-container {
+        width: 95%;
+    }
+
