@@ -8,7 +8,7 @@ class ControllerPersonnage {
     {
         $this->personnageManager = new PersonnageManager;
 
-        //check de l'existance de la session pour la gestion des erreurs
+        //check de l'existence de la session pour la gestion des erreurs
         if(!isset($_SESSION)) {
             session_start();
         }

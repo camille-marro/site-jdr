@@ -14,7 +14,7 @@ class PersonnageManager extends Model {
     }
 
     public function getCompetencesFromID($id) {
-        $raw_competences = $this->getSpecificElementFromTable('Compétences', "ID_p = $id");
+        $raw_competences = $this->getSpecificElementFromTable('Competences', "ID_p = $id");
         $competences = $this->makeCompetences($raw_competences);
         return $competences;
     }
