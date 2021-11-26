@@ -17,15 +17,17 @@ class ControllerPersonnage {
             $inputStream = $_POST['id-personnage'];
             if (!$this->personnageManager->checkInputStream($inputStream)) {
                 $_SESSION['error'] = 'Typographie incorrecte';
-                return;
+                $this->returnToAccueil();
             } else {
                 if(!preg_match('/[0-9]/', $inputStream)) {
                     $raw_id_personnage = $this->personnageManager->getIDPersonnageFromNom($inputStream);
                     if (count($raw_id_personnage) == 0) {
                         $_SESSION['error'] = 'Aucun personnage n\'a le nom : ' . $inputStream;
+                        $this->returnToAccueil();
                         return;
                     } else if (count($raw_id_personnage) > 1) {
                         $_SESSION['error'] = 'Plusieurs personnages ont le nom : ' . $inputStream;
+                        $this->returnToAccueil();
                         return;
                     } else {
                         $id_personnage = $raw_id_personnage[0]['ID'];
@@ -34,6 +36,7 @@ class ControllerPersonnage {
                     $raw_id_personnage = $this->personnageManager->getPersonnageFromID($inputStream);
                     if ($raw_id_personnage == 'erreur' || $raw_id_personnage == NULL) {
                         $_SESSION['error'] = 'ID inexistant';
+                        $this->returnToAccueil();
                         return;
                     } else {
                         $id_personnage = $raw_id_personnage['ID'];

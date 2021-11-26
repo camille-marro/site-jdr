@@ -1,9 +1,10 @@
 <div id="container">
+    <!--
     <div id="cancel-button-container">
         <form method="post" id="form-cancel" action="https://camille-marro.alwaysdata.net/">
-            <button id="cancel-button" type="submit" onclick="cancel()">Retour</button>
+            <button id="cancel-button" type="submit">Retour</button>
         </form>
-    </div>
+    </div> -->
     <div id="perso-first-line-container">
         <div id="perso-first-line">
             <div id="perso-name"><?php if(isset($data[0])) echo ucfirst($data[0]['nom']);?> <span id="dp">:</span></div>
