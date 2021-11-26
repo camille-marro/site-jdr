@@ -48,4 +48,15 @@ abstract class Model
         $request->closeCursor();
         return $nb_elem;
     }
+
+    protected function getAllElementFromTable($tableName) {
+        $listData = array();
+        $request = $this->getBDD()->prepare("SELECT * FROM $tableName");
+        $request->execute();
+        while ($dataProcessing = $request->fetch(PDO::FETCH_ASSOC)) {
+            array_push($listData, $dataProcessing);
+        }
+        $request->closeCursor();
+        return $listData;
+    }
 }
