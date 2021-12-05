@@ -1,7 +1,48 @@
 #container {
-    color: blue;
+    color: black;
+}
+
+label, #chapitre {
+    color: black;
+    font-size: 25px;
+}
+
+#form-button {
+    font-size: 25px;
+}
+
+#form-chapitre {
+    margin-bottom: 15px;
 }
 
 .chapitre-infos {
     display: none;
+    flex-direction: column;
+}
+
+.chapitre-name {
+    display: flex;
+    font-size: 50px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.chapitre-content {
+    display: flex;
+}
+
+.chapitre-map {
+    display: flex;
+}
+
+img {
+    width: 666px;
+    height: 500px;
+}
+
+.chapitre-story {
+    display: flex;
+    font-size: 20px;
+    text-align: justify;
+    margin-left: 15px;
 }

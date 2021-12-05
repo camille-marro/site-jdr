@@ -1,5 +1,5 @@
 <div id="container">
-    <form method="post" id="form-chapitre" action="https://camille-marro.alwaysdata.net/lore">
+    <form id="form-chapitre" action="https://camille-marro.alwaysdata.net/lore">
         <label for="chapitre">Choisir un chapitre :</label>
         <select id="chapitre" name="chapitre">
             <?php
@@ -12,7 +12,7 @@
                 }
             ?>
         </select>
-        <input type="button" onclick="submitform()">
+        <button id="form-button" type="button" onclick="submitform()">Sélectionner</button>
     </form>
 
     <div id="chapitres-container">
@@ -21,8 +21,11 @@
                 foreach ($data[0] as $chapter) {
                     echo '<div class="chapitre-infos" id="' . $chapter['titre'] . '">';
                     echo '  <div class="chapitre-name">' . $chapter['titre'] . '</div>';
-                    echo '  <div class="chapitre-content">' .  $chapter['contenu'] . '</div>';
-                    echo '</div><br>';
+                    echo '  <div class="chapitre-content">';
+                    echo '    <div class="chapitre-map"><img alt="image : ' . $chapter['titre'] . '" src="' . $chapter['lien_carte'] . '"></div>';
+                    echo '    <div class="chapitre-story">' .  $chapter['contenu'] . '</div>';
+                    echo '  </div>';
+                    echo '</div>';
                 }
             }
         ?>
