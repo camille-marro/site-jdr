@@ -7,16 +7,12 @@ class ControllerLore {
     public function __construct($dataPost) {
         $this->loreManager = new LoreManager;
 
-        if (!isset($_POST['chapitre'])) {
-            $chapters = $this->loreManager->getAllChapters();
-            $this->createView($chapters);
-            return;
-        }
-        $this->createView(NULL);
+        $chapters = $this->loreManager->getAllChapters();
+        $this->createView($chapters);
     }
 
     private function createView($chapters) {
         $this->view = new View('Lore');
-        $this->view->generateView(Array($chapters));
+        $this->view->generateView(array($chapters));
     }
 }
