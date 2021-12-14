@@ -19,7 +19,17 @@ class ControllerPersonnage {
                 $_SESSION['error'] = 'Typographie incorrecte';
                 $this->returnToAccueil();
             } else {
-                if(!preg_match('/[0-9]/', $inputStream)) {
+                $nb_occu = strlen($inputStream);
+                if(preg_match('/[0-9]{' . $nb_occu . '}/', $inputStream)) {
+                    $raw_id_personnage = $this->personnageManager->getPersonnageFromID($inputStream);
+                    if ($raw_id_personnage == 'erreur' || $raw_id_personnage == NULL) {
+                        $_SESSION['error'] = 'ID inexistant';
+                        $this->returnToAccueil();
+                        return;
+                    } else {
+                        $id_personnage = $raw_id_personnage['ID'];
+                    }
+                } else {
                     $raw_id_personnage = $this->personnageManager->getIDPersonnageFromNom($inputStream);
                     if (count($raw_id_personnage) == 0) {
                         $_SESSION['error'] = 'Aucun personnage n\'a le nom : ' . $inputStream;
@@ -31,15 +41,6 @@ class ControllerPersonnage {
                         return;
                     } else {
                         $id_personnage = $raw_id_personnage[0]['ID'];
-                    }
-                } else {
-                    $raw_id_personnage = $this->personnageManager->getPersonnageFromID($inputStream);
-                    if ($raw_id_personnage == 'erreur' || $raw_id_personnage == NULL) {
-                        $_SESSION['error'] = 'ID inexistant';
-                        $this->returnToAccueil();
-                        return;
-                    } else {
-                        $id_personnage = $raw_id_personnage['ID'];
                     }
                 }
                 if (isset($_POST['glods'])) {
