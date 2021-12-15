@@ -1,3 +1,7 @@
+body {
+    background-image: url("https://camille-marro.alwaysdata.net/public/assets/images/fond_accueil.jpg");
+}
+
 #main-container {
     display: flex;
     justify-content: center;
@@ -14,7 +18,8 @@
     padding: 0 200px 0 200px;
     border-radius: 20px;
     box-shadow: 2px 0px 20px dimgrey;
-    transition: border 0.5s ease-out;;
+    transition: border 0.5s ease-out;
+    background-color: white;
 }
 
 #container:hover {
